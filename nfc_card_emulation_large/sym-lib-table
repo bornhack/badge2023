@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NFC")(type "KiCad")(uri "/Users/tf/Documents/Libraries/KiCad_flummer.net/NFC.kicad_sym")(options "")(descr ""))
+)
