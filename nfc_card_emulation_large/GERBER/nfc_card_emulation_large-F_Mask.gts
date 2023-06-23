@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,7.0.1-0*
-G04 #@! TF.CreationDate,2023-05-11T23:21:43+02:00*
-G04 #@! TF.ProjectId,nfc_card_emulation_large,6e66635f-6361-4726-945f-656d756c6174,1.0*
+G04 #@! TF.CreationDate,2023-06-22T21:26:39+02:00*
+G04 #@! TF.ProjectId,nfc_card_emulation_large,6e66635f-6361-4726-945f-656d756c6174,1.1*
 G04 #@! TF.SameCoordinates,PX354a940PY3072580*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 7.0.1-0) date 2023-05-11 23:21:43*
+G04 Created by KiCad (PCBNEW 7.0.1-0) date 2023-06-22 21:26:39*
 %MOMM*%
 %LPD*%
 G01*
@@ -36,11 +36,11 @@ G04 Aperture macros list end*
 %ADD14R,1.100000X0.400000*%
 G04 APERTURE END LIST*
 D10*
-G04 #@! TO.C,FD*
+G04 #@! TO.C,TP2*
 X33087500Y-22700000D03*
 G04 #@! TD*
 D11*
-G04 #@! TO.C,J1*
+G04 #@! TO.C,J3*
 X48587500Y-20500000D03*
 X48587500Y-19500000D03*
 X48587500Y-18500000D03*
@@ -50,11 +50,11 @@ X52462500Y-21800000D03*
 X52462500Y-16200000D03*
 G04 #@! TD*
 D10*
-G04 #@! TO.C,VOUT*
+G04 #@! TO.C,TP1*
 X20687500Y-22700000D03*
 G04 #@! TD*
 D13*
-G04 #@! TO.C,C1*
+G04 #@! TO.C,C33*
 X27962500Y-18450000D03*
 X26412500Y-18450000D03*
 G04 #@! TD*

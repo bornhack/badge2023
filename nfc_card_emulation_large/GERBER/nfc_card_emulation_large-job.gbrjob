@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "7.0.1-0"
     },
-    "CreationDate": "2023-05-11T23:21:43+02:00"
+    "CreationDate": "2023-06-22T21:26:39+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "nfc_card_emulation_large",
       "GUID": "6e66635f-6361-4726-945f-656d756c6174",
-      "Revision": "1.0"
+      "Revision": "1.1"
     },
     "Size": {
       "X": 54.075,

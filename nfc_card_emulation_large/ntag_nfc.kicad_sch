@@ -6,7 +6,7 @@
 
   (title_block
     (title "NFC NTAG I2C tag")
-    (date "2023-05-07")
+    (date "2023-06-22")
     (rev "1.0")
     (comment 1 "CC-BY-SA")
   )
@@ -245,7 +245,7 @@
     )
     (pin "1" (uuid 1153a784-83d1-4c68-8db3-0db205b711cd))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb/dcc1f91b-33ec-4f9d-b582-080400b05bca"
           (reference "#PWR02") (unit 1)
         )
@@ -270,7 +270,7 @@
     )
     (pin "1" (uuid 78bdbbee-31f1-4dc7-8a20-0f3520f1ce88))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb/dcc1f91b-33ec-4f9d-b582-080400b05bca"
           (reference "#PWR01") (unit 1)
         )
@@ -284,7 +284,7 @@
     (property "Reference" "U2" (at 103.5559 73.66 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "NT3H2x11" (at 103.5559 76.2 0)
+    (property "Value" "NT3H2211" (at 103.5559 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm" (at 101.6 85.09 0)
@@ -302,7 +302,7 @@
     (pin "7" (uuid a103235f-97f5-4386-b7f6-61a8a25ed25e))
     (pin "8" (uuid 0594df69-6296-4eda-b284-424eefe438f9))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb/dcc1f91b-33ec-4f9d-b582-080400b05bca"
           (reference "U2") (unit 1)
         )

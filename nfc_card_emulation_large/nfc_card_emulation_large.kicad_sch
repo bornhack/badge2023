@@ -6,8 +6,8 @@
 
   (title_block
     (title "NFC Card Emulation only")
-    (date "2023-05-07")
-    (rev "1.0")
+    (date "2023-06-22")
+    (rev "1.1")
     (comment 1 "CC-BY-SA")
   )
 
@@ -373,7 +373,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 92.71 118.11 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 07f1e06f-21a9-45d3-8a14-1a8bd27a19f9)
     (property "Reference" "TP2" (at 95.25 114.173 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -389,7 +389,7 @@
     )
     (pin "1" (uuid 04761fc5-2ee9-4eaa-a616-991856b1c24d))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "TP2") (unit 1)
         )
@@ -414,7 +414,7 @@
     )
     (pin "1" (uuid 03c7eacf-ab84-4a5b-b901-8f7729cab9ec))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "#PWR04") (unit 1)
         )
@@ -439,7 +439,7 @@
     )
     (pin "1" (uuid 1dc77ed3-d848-4468-a8a0-efd6762e7320))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "#PWR03") (unit 1)
         )
@@ -464,7 +464,7 @@
     )
     (pin "1" (uuid ce55dbb3-9b0c-4141-bcf2-fe0d37dc4b2f))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "#PWR06") (unit 1)
         )
@@ -489,7 +489,7 @@
     )
     (pin "1" (uuid 95ff0594-7224-4c08-a770-c6af53495efd))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "#PWR05") (unit 1)
         )
@@ -500,7 +500,7 @@
   (symbol (lib_id "Device:C") (at 163.83 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2354066d-d074-4a66-beeb-f259e8729d45)
-    (property "Reference" "C1" (at 167.64 112.395 0)
+    (property "Reference" "C33" (at 167.64 112.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nf" (at 167.64 114.935 0)
@@ -515,9 +515,9 @@
     (pin "1" (uuid 2c658733-0ed7-47b6-8581-dcba5ed4a039))
     (pin "2" (uuid d5de2009-3326-4c61-aa4b-2b59a588adb5))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
-          (reference "C1") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
     )
@@ -526,10 +526,10 @@
   (symbol (lib_id "Connector:Conn_01x04_Male") (at 132.08 114.3 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5c0f6343-d1c9-4402-b605-e872e140cb6b)
-    (property "Reference" "J1" (at 130.175 112.3949 0)
+    (property "Reference" "J3" (at 130.81 112.395 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Qwiic" (at 130.175 114.9349 0)
+    (property "Value" "LCSC C145956" (at 130.81 114.935 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal" (at 132.08 114.3 0)
@@ -543,16 +543,16 @@
     (pin "3" (uuid 3e53d21d-b986-49d2-a05d-9a276233acbd))
     (pin "4" (uuid 0d2eb03d-aec4-4567-bed5-c4476d4cd16c))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
-          (reference "J1") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 93.98 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b605b6dc-fd2a-4039-b2b3-edabb40e4ce5)
     (property "Reference" "TP1" (at 96.52 77.343 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -568,7 +568,7 @@
     )
     (pin "1" (uuid ff22fa8f-fdfc-4041-acd1-27ab4e4a7442))
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb"
           (reference "TP1") (unit 1)
         )
@@ -603,7 +603,7 @@
       (uuid e0b9a9a2-8568-4e63-8d31-68e50bbcf054)
     )
     (instances
-      (project "nfc_card_emulation"
+      (project "nfc_card_emulation_large"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb" (page "4"))
       )
     )
