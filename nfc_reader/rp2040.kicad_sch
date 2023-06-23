@@ -6,8 +6,8 @@
 
   (title_block
     (title "RP2040 base circuit")
-    (date "2022-06-12")
-    (rev "1.0")
+    (date "2023-06-04")
+    (rev "1.1")
     (comment 1 "CC-BY-SA")
   )
 
@@ -2038,7 +2038,7 @@
     (property "Reference" "SW6" (at 115.951 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "RESET" (at 118.2624 58.42 0)
+    (property "Value" "TS5220A" (at 118.2624 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 121.92 58.42 0)
@@ -2089,7 +2089,7 @@
     (property "Reference" "SW7" (at 131.191 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "BOOT" (at 133.5024 58.42 0)
+    (property "Value" "TS5220A" (at 133.5024 58.42 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 137.16 58.42 0)
@@ -2612,7 +2612,7 @@
     (property "Reference" "J2" (at 46.355 121.2849 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Qwiic" (at 46.355 123.8249 0)
+    (property "Value" "LCSC C145956" (at 46.355 123.8249 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal" (at 48.26 123.19 0)
@@ -2818,7 +2818,7 @@
     (property "Reference" "Y1" (at 195.58 95.25 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "12MHz" (at 195.58 90.17 90)
+    (property "Value" "12MHz, 20pF" (at 195.58 90.17 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" (at 195.58 95.25 0)
@@ -2918,7 +2918,7 @@
   )
 
   (symbol (lib_id "Connector:Conn_01x06_Female") (at 140.97 120.65 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom no) (on_board yes) (dnp no)
     (uuid 7367f83b-2fd2-4566-b125-9d1a4c568a80)
     (property "Reference" "J3" (at 141.6812 121.2596 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -3795,7 +3795,7 @@
   (symbol (lib_id "Device:LED") (at 274.32 113.03 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e55b8f61-96a5-45c1-a496-66b8222ad987)
-    (property "Reference" "D1" (at 278.13 113.3474 90)
+    (property "Reference" "D0" (at 278.13 113.3474 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LED" (at 278.13 115.8874 90)
@@ -3812,7 +3812,7 @@
     (instances
       (project "nfc_reader"
         (path "/01149b17-33ef-4823-97dd-2a81938478fb/559cdf0d-169d-4cf2-8158-228eb70a146b"
-          (reference "D1") (unit 1)
+          (reference "D0") (unit 1)
         )
       )
     )

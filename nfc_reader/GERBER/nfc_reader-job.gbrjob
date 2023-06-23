@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "7.0.1-0"
     },
-    "CreationDate": "2023-05-11T23:17:20+02:00"
+    "CreationDate": "2023-06-22T23:02:25+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "nfc_reader",
       "GUID": "6e66635f-7265-4616-9465-722e6b696361",
-      "Revision": "1.0"
+      "Revision": "1.1"
     },
     "Size": {
       "X": 54.075,
@@ -83,6 +83,7 @@
     {
       "Type": "Legend",
       "Color": "White",
+      "Material": "Liquid Photo",
       "Name": "Top Silk Screen"
     },
     {
@@ -93,6 +94,7 @@
       "Type": "SolderMask",
       "Color": "Black",
       "Thickness": 0.01,
+      "Material": "Liquid Ink",
       "Name": "Top Solder Mask"
     },
     {
@@ -117,6 +119,7 @@
       "Type": "SolderMask",
       "Color": "Black",
       "Thickness": 0.01,
+      "Material": "Liquid Ink",
       "Name": "Bottom Solder Mask"
     },
     {
@@ -126,6 +129,7 @@
     {
       "Type": "Legend",
       "Color": "White",
+      "Material": "Liquid Photo",
       "Name": "Bottom Silk Screen"
     }
   ]
