@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Aesthetics")(type "KiCad")(uri "/Users/tf/Documents/Libraries/KiCad_flummer.net/Aesthetics.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,21 @@
+### Footprint positions - created on 2023 June 23, Friday 17:05:55 ###
+### Printed by KiCad version 7.0.1-0
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val           Package                                                PosX       PosY       Rot  Side
+D1        LED           LED_0603_1608Metric                                  9.8425   -16.5100  180.0000  top
+D2        LED           LED_0603_1608Metric                                 21.2725   -16.5100  180.0000  top
+D3        LED           LED_0603_1608Metric                                 32.7025   -16.5100  180.0000  top
+D4        LED           LED_0603_1608Metric                                 44.1325   -16.5100  180.0000  top
+J1        LCSC_C145956  JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal     3.4925   -10.1600  -90.0000  top
+J2        LCSC_C145956  JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal    50.4825   -10.1600   90.0000  top
+R1        1k            R_0603_1608Metric                                    9.8425   -13.9700  180.0000  top
+R2        1k            R_0603_1608Metric                                   21.2725   -13.9700  180.0000  top
+R3        1k            R_0603_1608Metric                                   32.7025   -13.9700  180.0000  top
+R4        1k            R_0603_1608Metric                                   44.1325   -13.9700  180.0000  top
+SW1       TS5220A       SW_SPST_TL3342                                       9.8425   -22.6060    0.0000  top
+SW2       TS5220A       SW_SPST_TL3342                                      21.2725   -22.6060    0.0000  top
+SW3       TS5220A       SW_SPST_TL3342                                      32.7025   -22.6060    0.0000  top
+SW4       TS5220A       SW_SPST_TL3342                                      44.1325   -22.6060    0.0000  top
+U1        TCA9534       TSSOP-16_4.4x5mm_P0.65mm                            34.6075    -7.6200    0.0000  top
+## End
