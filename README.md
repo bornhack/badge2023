@@ -16,7 +16,7 @@ The original python files that was on the badge when handed out are in the [cp-i
 
 ## Designed in KiCad v7
 
-This board is designed in KiCad v7. To open the project, you will need to install a recent release version or one of the nightly builds, KiCad v5 og v6 won't open this design. The [reader schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_reader/nfc_reader_schematics.pdf) and the [tag schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_card_emulation_large/nfc_card_emulation_large_schematics.pdf) are included for reference.
+This board is designed in KiCad v7. To open the project, you will need to install a recent release version or one of the nightly builds, KiCad v5 or v6 won't open this design. The [reader schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_reader/nfc_reader_schematics.pdf) and the [tag schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_card_emulation_large/nfc_card_emulation_large_schematics.pdf) are included for reference.
 
 ## Projects running on the badge
 
