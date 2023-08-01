@@ -12,6 +12,8 @@ The reader badge will come with [CircuitPython](https://circuitpython.org/) prel
 
 If you flash the board with something else and want to get back to CircuitPython, you can bring the badge into the UF2 bootloader by holding the BOOT button and pressing RESET (you can also hold BOOT when powering on). The badge will then show up as a mass storage device called something like RP2-? which is the build in bootloader and you simply copy over the [firmware.uf2](https://github.com/bornhack/badge2023/raw/main/firmware.uf2) file from the root of this repository. The badge will reboot, and you are then back to CircuitPython
 
+CircuitPython with this board supported is found in the [circuitpython branch](https://github.com/bornhack/badge2023/tree/circuitpython)
+
 The original python files that was on the badge when handed out are in the [cp-init branch](https://github.com/bornhack/badge2023/tree/cp-init)
 
 ## Designed in KiCad v7
