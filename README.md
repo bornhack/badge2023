@@ -24,6 +24,20 @@ The original python files that was on the badge when handed out are in the [cp-i
 
 To open the project, you will need to install a recent release version or one of the nightly builds, KiCad v5 or v6 won't open this design. The [reader schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_reader/nfc_reader_schematics.pdf) and the [tag schematic as a PDF](https://github.com/bornhack/badge2023/raw/main/nfc_card_emulation_large/nfc_card_emulation_large_schematics.pdf) are included for reference.
 
+Main Components:
+
+- [Raspberry Pi SoC RP2040 - low-cost, high-performance microcontroller device](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)
+    - [datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
+    - [RP2040 SDK Manuel](https://www.raspberrypi.com/documentation/microcontrollers/c_sdk.html#sdk-setup)
+    - [RP2040 SDK git repository](https://github.com/raspberrypi/pico-sdk)
+- [NXP PN7150 - High-Performance NFC Controller with Integrated Firmware](https://www.nxp.com/products/rfid-nfc/nfc-hf/nfc-readers/high-performance-nfc-controller-with-integrated-firmware-for-smart-devices:PN7150)
+    - [Datasheet](https://www.nxp.com/docs/en/data-sheet/PN7150.pdf)
+    - [User Manual](https://www.nxp.com/docs/en/user-guide/UM10936.pdf)
+- [W25Q128JV - 128M-bit Serial Flash Memory with uniform 4KB sectors and Dual/Quad SPI](https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&partNo=W25Q128JV)
+    - [datasheet](https://www.winbond.com/hq/support/documentation/downloadV2022.jsp?__locale=en&xmlPath=/support/resources/.content/item/DA00-W25Q128JV.html&level=1)
+- [NXP NT3H2211W0FTT - NTAG I2C plus 2K, NFC Forum Type 2 Tag with I2C interface](https://www.nxp.com/part/NT3H2211W0FTT#/)
+    - [datasheet](https://www.nxp.com/docs/en/data-sheet/NT3H2111_2211.pdf)
+
 ## Projects running on the badge
 
 Feel free to submit a PR adding on to this list with your project that runs on the badge.
