@@ -46,9 +46,13 @@ Feel free to submit a PR adding on to this list with your project that runs on t
 
 ## License
 
-The contents of this repository is released under the following license:
+The hardware design of the `main` branch of this repository is released under the following license:
 
 * the "Creative Commons Attribution-ShareAlike 4.0 International License"
   (CC BY-SA 4.0) full text of this license is included in the LICENSE file
   and a copy can also be found at
   [http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
+
+The CircuitPython firmware of the `circuitpython` branch is released under the MIT license with smaller dependencies under other licenses as detailed in [its LICENSE](https://github.com/bornhack/badge2023/blob/circuitpython/LICENSE) and [LICENSE_MicroPython](https://github.com/bornhack/badge2023/blob/circuitpython/LICENSE_MicroPython) files.
+
+The Python NFC demonstration application of the `cp-init` branch is released under the MIT license as detailed in its [LICENSE file](https://github.com/bornhack/badge2023/blob/cp-init/LICENSE).
