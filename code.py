@@ -24,6 +24,11 @@ while True:
     print("Waiting for card..")
     card = nfc.waitForCard()
 
+    #Read sectors starting at 4 reading 4 sectors at a time
+    for i in range(4,24,4):
+        sector =nfc.ReaderTagCmd(b"\x30" + i.to_bytes(1,'big'))
+        print("Sector {0:02d}:".format(i), ":".join("{:02x}".format(x) for x in sector),''.join([chr(x) if x < 128 and x > 31 else '.' for x in sector]))
+
     assert nfc.stopDiscovery()
 
     print("ID: {}".format(card.nfcid1()))

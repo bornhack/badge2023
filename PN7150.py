@@ -229,3 +229,14 @@ class PN7150:
         self._i2c.unlock()
 
         return Card(self._buf, end)
+
+    def ReaderTagCmd(self, command: bytes):
+        assert self._i2c.try_lock()
+        cmd=[0x00,0x00,len(command)]
+        self._write(bytes(cmd) + command)
+        self._read()
+        end = self._read(1000)
+        data = self._buf
+        #print("debug", data[:data[2]+2])
+        self._i2c.unlock()
+        return data[3:data[2]+2]
