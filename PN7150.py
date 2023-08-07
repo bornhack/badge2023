@@ -174,13 +174,15 @@ class PN7150:
                 return 0
         return self.__read()
 
-    def _write(self, cmd: bytes):
+    def _write(self, cmd: bytes, end: int = 0):
         # discard incoming messages
         while self._irq.value == 1:
             self.__read()
+        if not end:
+            end = len(cmd)
         if self._debug:
-            dump_package(cmd, len(cmd), prefix="> ")
-        return self._i2c.writeto(self._addr, cmd)
+            dump_package(cmd, end, prefix="> ")
+        return self._i2c.writeto(self._addr, cmd, end=end)
 
     def _connect(self):
         self.reset()
@@ -249,13 +251,19 @@ class PN7150:
 
         return Card(self._buf, end)
 
-    def ReaderTagCmd(self, command: bytes):
+    def tagCmd(self, cmd: bytes, connID: int = 0):
         assert self._i2c.try_lock()
-        cmd=[0x00,0x00,len(command)]
-        self._write(bytes(cmd) + command)
-        self._read()
-        end = self._read(1000)
-        data = self._buf
-        #print("debug", data[:data[2]+2])
+        self._buf[0] = connID
+        self._buf[1] = 0x00
+        self._buf[2] = len(cmd)
+        end = 3 + len(cmd)
+        self._buf[3:end] = cmd
+        self._write(self._buf, end=end)
+
+        while True:
+            end = self._read()
+            if self._buf[0] & 0xe0 == 0x00:
+                break
+
         self._i2c.unlock()
-        return data[3:data[2]+2]
+        return self._buf[3:end]
