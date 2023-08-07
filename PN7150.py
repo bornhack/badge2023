@@ -5,23 +5,36 @@ from busio import I2C
 
 _TICKS_PERIOD = const(1<<29)
 
-STATUS_OK       = const(0x00)
-STATUS_REJECTED = const(0x01)
-STATUS_FAILED   = const(0x03)
+STATUS_OK = const(0x00)
 
+_status = {
+    # Status
+    0x00: "OK",
+    0x01: "REJECTED",
+    0x02: "RF_FRAME_CORRUPTED",
+    0x03: "FAILED",
+    0x04: "NOT_INITIALIZED",
+    0x05: "SYNTAX_ERROR",
+    0x06: "SEMANTIC_ERROR",
+    0x09: "INVALID_PARAM",
+    0x0a: "MESSAGE_SIZE_EXCEEDED",
+    # Discovery
+    0xa0: "ALREADY_STARTED",
+    0xa1: "TARGET_ACTIVATION_FAILED",
+    0xa2: "TEAR_DOWN",
+    # RF
+    0xb0: "TRANSMISSION_ERROR",
+    0xb1: "PROTOCOL_ERROR",
+    0xb2: "TIMEOUT_ERROR",
+}
 def status(nr: int):
-    if nr == STATUS_OK:
-        return "OK"
-    elif nr == STATUS_REJECTED:
-        return "REJECTED"
-    elif nr == STATUS_FAILED:
-        return "FAILED"
-    else:
-        return "0x{:02x}".format(nr)
+    return _status.get(nr, None) or "0x{:02x}".format(nr)
 
 def dump_package(buf: bytes, end: int, prefix: str = ""):
     fst, snd = buf[0], buf[1]
-    if fst == 0x20 and snd == 0x00:
+    if fst & 0xe0 == 0:
+        print("{}Data packet to/from {} length {}".format(prefix, buf[0] & 0x0f, buf[2]))
+    elif fst == 0x20 and snd == 0x00:
         print("{}CORE_RESET_CMD({}) Reset Configuration: {}".format(prefix, end, buf[3]))
     elif fst == 0x40 and snd == 0x00:
         print("{}CORE_RESET_RSP({}) Status: {} NCI Version: 0x{:02x} Configuration Status: 0x{:02x}".format(
@@ -45,12 +58,18 @@ def dump_package(buf: bytes, end: int, prefix: str = ""):
         n = buf[8]
         print("{}CORE_INIT_RSP({}) Status: {} #RF Interfaces: {} Max Payload Size: {}".format(
             prefix, end, status(buf[3]), n, buf[12+n]))
+    elif fst == 0x60 and snd == 0x06:
+        print("{}CORE_CONN_CREDITS_NTF({}) #Entries: {}".format(prefix, end, buf[3]))
+    elif fst == 0x60 and snd == 0x07:
+        print("{}CORE_GENERIC_ERROR_NTF({}) Status: {}".format(prefix, end, status(buf[3])))
+    elif fst == 0x60 and snd == 0x08:
+        print("{}CORE_INTERFACE_ERROR_NTF({}) Status: {} ConnID: {}".format(prefix, end, status(buf[3]), buf[4]))
     elif fst == 0x21 and snd == 0x00:
         print("{}RF_DISCOVER_MAP_CMD({}) #Mapping Configurations: {}".format(prefix, end, buf[3]))
     elif fst == 0x41 and snd == 0x00:
         print("{}RF_DISCOVER_MAP_RSP({}) Status: {}".format(prefix, end, status(buf[3])))
     elif fst == 0x21 and snd == 0x03:
-        print("{}RF_DISCOVER_CMD({}) #Configurations: {}".format(prefix, end, status(buf[3])))
+        print("{}RF_DISCOVER_CMD({}) #Configurations: {}".format(prefix, end, buf[3]))
     elif fst == 0x41 and snd == 0x03:
         print("{}RF_DISCOVER_RSP({}) Status: {}".format(prefix, end, status(buf[3])))
     elif fst == 0x21 and snd == 0x06:
